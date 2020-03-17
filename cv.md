@@ -1,4 +1,5 @@
 #Artur Yaroshinski
+
 ###Contact info:
 
 + *arturyaroshinskiy@gmail.com*
@@ -6,7 +7,9 @@
 
 ###Summary:
 
-I’am 19 years old, now i am a first-year student. I prefer to spend my free time by playing computer games with my friends. Also i enjoy swimming, usually i visit the pool abought 2 times a week.
+I’am 19 years old, now i am a first-year student.
+I prefer to spend my free time by playing computer games with my friends.
+Also i enjoy swimming, usually i visit the pool abought 2 times a week.
 
 ###English:
 
