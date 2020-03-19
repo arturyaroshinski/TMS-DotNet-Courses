@@ -2,9 +2,8 @@
 
 ### Contact info:
 
-- *arturyaroshinskiy@gmail.com*
-
-- [VK](vk.com/artur_yaroshinski)
++ *arturyaroshinskiy@gmail.com*
++ [VK](vk.com/artur_yaroshinski)
 
 ### Summary:
 
