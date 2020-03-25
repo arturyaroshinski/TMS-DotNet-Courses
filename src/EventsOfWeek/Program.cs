@@ -6,13 +6,13 @@ namespace EventsOfWeek
     {
         enum Week
         {
-            Sunday = 0,
             Monday = 1,
             Tuesday = 2,
             Wednesday = 3,
             Thursday = 4,
             Friday = 5,
-            Saturday = 6
+            Saturday = 6,
+            Sunday = 7,
         }
         static string[] arrayWithEvents = new string[7];
         static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace EventsOfWeek
             {
                 Console.WriteLine("Hello, dear friend.");
                 Console.WriteLine("You can select the day by entering its name or number.");
-                Console.WriteLine("Example: 'Monday', 'mon', '1'(Remember that sunday - 0, monday - 1 etc.).");
+                Console.WriteLine("Example: 'Monday', 'mon', '1' (Remember that monday - 1, tuesday - 2, etc.).");
                 Console.WriteLine("Good luck!");
                 Console.WriteLine("**************************************************************************");
                 SelectDay();
@@ -38,12 +38,6 @@ namespace EventsOfWeek
             string userInput = Console.ReadLine();
             switch (userInput.ToLower())
             {
-                case "sun":
-                case "sunday":
-                case "0":
-                    Console.WriteLine("U choose sunday.");
-                    AddEvent(Convert.ToInt32(Week.Sunday));
-                    break;
                 case "mon":
                 case "monday":
                 case "1":
@@ -80,22 +74,29 @@ namespace EventsOfWeek
                     Console.WriteLine("U choose saturday.");
                     AddEvent(Convert.ToInt32(Week.Saturday));
                     break;
+                case "sun":
+                case "sunday":
+                case "7":
+                    Console.WriteLine("U choose sunday.");
+                    AddEvent(Convert.ToInt32(Week.Sunday));
+                    break;
                 default:
                     Console.WriteLine("Invalid input, try again.");
                     SelectDay();
                     break;
+                    
             }
         }
         static void AddEvent(int day)
         {
-            if (string.IsNullOrWhiteSpace(arrayWithEvents[day]))
+            if (string.IsNullOrWhiteSpace(arrayWithEvents[day - 1]))
             {
                 Console.Write("Input event:");
-                arrayWithEvents[day] = Console.ReadLine();
+                arrayWithEvents[day - 1] = Console.ReadLine();
             }
             else
             {
-                Console.WriteLine("U already have event at this day: " + arrayWithEvents[day]);
+                Console.WriteLine("U already have event at this day: " + arrayWithEvents[day - 1]);
             }
         }
     }
