@@ -42,43 +42,43 @@ namespace EventsOfWeek
                 case "monday":
                 case "1":
                     Console.WriteLine("U choose monday.");
-                    AddEvent(Convert.ToInt32(Week.Monday));
+                    AddEvent(Week.Monday);
                     break;
                 case "tue":
                 case "tuesday":
                 case "2":
                     Console.WriteLine("U choose tuesday.");
-                    AddEvent(Convert.ToInt32(Week.Tuesday));
+                    AddEvent(Week.Tuesday);
                     break;
                 case "wed":
                 case "wednesday":
                 case "3":
                     Console.WriteLine("U choose wednesday.");
-                    AddEvent(Convert.ToInt32(Week.Wednesday));
+                    AddEvent(Week.Wednesday);
                     break;
                 case "thu":
                 case "thurday":
                 case "4":
                     Console.WriteLine("U choose thursday.");
-                    AddEvent(Convert.ToInt32(Week.Thursday));
+                    AddEvent(Week.Thursday);
                     break;
                 case "fri":
                 case "friday":
                 case "5":
                     Console.WriteLine("U choose friday.");
-                    AddEvent(Convert.ToInt32(Week.Friday));
+                    AddEvent(Week.Friday);
                     break;
                 case "sat":
                 case "saturday":
                 case "6":
                     Console.WriteLine("U choose saturday.");
-                    AddEvent(Convert.ToInt32(Week.Saturday));
+                    AddEvent(Week.Saturday);
                     break;
                 case "sun":
                 case "sunday":
                 case "7":
                     Console.WriteLine("U choose sunday.");
-                    AddEvent(Convert.ToInt32(Week.Sunday));
+                    AddEvent(Week.Sunday);
                     break;
                 default:
                     Console.WriteLine("Invalid input, try again.");
@@ -87,16 +87,16 @@ namespace EventsOfWeek
                     
             }
         }
-        static void AddEvent(int day)
+        static void AddEvent(Week day)
         {
-            if (string.IsNullOrWhiteSpace(arrayWithEvents[day - 1]))
+            if (string.IsNullOrWhiteSpace(arrayWithEvents[((int)day - 1)]))
             {
                 Console.Write("Input event:");
-                arrayWithEvents[day - 1] = Console.ReadLine();
+                arrayWithEvents[(int)day - 1] = Console.ReadLine();
             }
             else
             {
-                Console.WriteLine("U already have event at this day: " + arrayWithEvents[day - 1]);
+                Console.WriteLine("U already have event at this day: " + arrayWithEvents[(int)day - 1]);
             }
         }
     }
