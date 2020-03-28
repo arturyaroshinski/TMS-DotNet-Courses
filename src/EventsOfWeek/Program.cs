@@ -134,7 +134,17 @@ namespace EventsOfWeek
         }
         static void DeleteEvent()
         {
-            // TODO: add implementation
+            Week day = SelectDay();
+            if (string.IsNullOrEmpty(arrayWithEvents[(int)day - 1]))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("U dont have event at this day.");
+            }
+            else
+            {
+                Console.WriteLine($"Event '{arrayWithEvents[(int)day - 1]}' was successfully deleted.");
+                arrayWithEvents[(int)day - 1] = string.Empty;
+            }
         }
     }
 }
