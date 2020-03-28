@@ -15,10 +15,7 @@ namespace EventsOfWeek
             Sunday = 7,
         }
         static string[] arrayWithEvents = new string[7];
-        static void Main(string[] args)
-        {
-                Menu();
-        }
+        static void Main(string[] args) => Menu();
         static void Menu()
         {
             while (true)
@@ -53,47 +50,62 @@ namespace EventsOfWeek
         }
         static Week SelectDay()
         {
-            
-            Console.WriteLine("You can select the day by entering its name or number.");
-            Console.WriteLine("Example: 'Monday', 'mon', '1' (Remember that monday - 1, tuesday - 2, etc.).");
-            string userInput = Console.ReadLine();
-            switch (userInput.ToLower())
+            while (true)
             {
-                case "mon":
-                case "monday":
-                case "1":
-                    return Week.Monday;
-                case "tue":
-                case "tuesday":
-                case "2":
-                    return Week.Tuesday;
-                case "wed":
-                case "wednesday":
-                case "3":
-                    return Week.Wednesday;
-                case "thu":
-                case "thurday":
-                case "4":
-                    return Week.Thursday;
-                case "fri":
-                case "friday":
-                case "5":
-                    return Week.Friday;
-                case "sat":
-                case "saturday":
-                case "6":
-                    return Week.Saturday;
-                case "sun":
-                case "sunday":
-                case "7":
-                    return Week.Sunday;
-                default:
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalid input, try again.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    break;
+                Console.WriteLine("You can select the day by entering its name or number.");
+                Console.WriteLine("Example: 'Monday', 'mon', '1' (Remember that monday - 1, tuesday - 2, etc.).");
+                string userInput = Console.ReadLine();
+                switch (userInput.ToLower())
+                {
+                    case "mon":
+                    case "monday":
+                    case "1":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose monday.");
+                        return Week.Monday;
+                    case "tue":
+                    case "tuesday":
+                    case "2":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose tuesday.");
+                        return Week.Tuesday;
+                    case "wed":
+                    case "wednesday":
+                    case "3":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose wednesday.");
+                        return Week.Wednesday;
+                    case "thu":
+                    case "thurday":
+                    case "4":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose thursday.");
+                        return Week.Thursday;
+                    case "fri":
+                    case "friday":
+                    case "5":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose friday.");
+                        return Week.Friday;
+                    case "sat":
+                    case "saturday":
+                    case "6":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose saturday.");
+                        return Week.Saturday;
+                    case "sun":
+                    case "sunday":
+                    case "7":
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("U choose sunday.");
+                        return Week.Sunday;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid input, try again.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                }
             }
-            return Week.Friday;
         }
         static void AddEvent(Week day)
         {
@@ -106,11 +118,19 @@ namespace EventsOfWeek
             {
                 Console.WriteLine("U already have event at this day: " + arrayWithEvents[(int)day - 1]);
             }
+            Console.WriteLine("Event successfully added");
             Console.WriteLine();
         }
         static void ViewEvents()
         {
-            // TODO: Add implementation.
+            Week day = new Week();
+            Console.WriteLine("\nUr events:");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            for (int i = 0; i < arrayWithEvents.Length; i++)
+            {
+                Console.WriteLine($"{(Week)i + 1}: {arrayWithEvents[i]}");
+            }
+            Console.WriteLine();
         }
         static void DeleteEvent()
         {
