@@ -123,7 +123,6 @@ namespace EventsOfWeek
         }
         static void ViewEvents()
         {
-            Week day = new Week();
             Console.WriteLine("\nUr events:");
             Console.ForegroundColor = ConsoleColor.Yellow;
             for (int i = 0; i < arrayWithEvents.Length; i++)
