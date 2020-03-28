@@ -17,20 +17,20 @@ namespace EventsOfWeek
         static string[] arrayWithEvents = new string[7];
         static void Main(string[] args)
         {
+                Menu();
+        }
+        static void Menu()
+        {
             while (true)
             {
-                Console.WriteLine("Hello, dear friend.");
-                Console.WriteLine("You can select the day by entering its name or number.");
-                Console.WriteLine("Example: 'Monday', 'mon', '1' (Remember that monday - 1, tuesday - 2, etc.).");
-                Console.WriteLine("Good luck!");
-                Console.WriteLine("**************************************************************************");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Menu: ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("[1] Add event.\n[2] View events.\n[3] Delete event.\n[4] Quit app.");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Select option by writing its number.");
+                string userInput = Console.ReadLine();
                 SelectDay();
-                Console.WriteLine("Input 'q' for exit, any other input will restart app");
-                if (Console.ReadLine().Equals("q"))
-                {
-                    return;
-                }
-                Console.Clear();
             }
         }
         static void SelectDay()
@@ -89,7 +89,7 @@ namespace EventsOfWeek
         }
         static void AddEvent(Week day)
         {
-            if (string.IsNullOrWhiteSpace(arrayWithEvents[((int)day - 1)]))
+            if (string.IsNullOrWhiteSpace(arrayWithEvents[(int)day - 1]))
             {
                 Console.Write("Input event:");
                 arrayWithEvents[(int)day - 1] = Console.ReadLine();
