@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc", "src\SimpleCal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsOfWeek", "src\EventsOfWeek\EventsOfWeek.csproj", "{2BA658F7-C5AF-4D2D-A27F-CA5080695565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar-v2.0", "SimpleCalendar-v2.0\SimpleCalendar-v2.0.csproj", "{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar-v2.0", "src\SimpleCalendar-v2.0\SimpleCalendar-v2.0.csproj", "{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
