@@ -68,6 +68,8 @@ namespace SimpleCalendar_v2._0
             Console.Write("Enter ur event at this day: ");
             userEvent.Name = Console.ReadLine();
             eventsList.Add(userEvent);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Event successfully added\n");
         }
         static void ViewEvents()
         {   
