@@ -6,7 +6,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc", "src\SimpleCal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsOfWeek", "src\EventsOfWeek\EventsOfWeek.csproj", "{2BA658F7-C5AF-4D2D-A27F-CA5080695565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar-v2.0", "src\SimpleCalendar-v2.0\SimpleCalendar-v2.0.csproj", "{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalendar-v2.0", "src\SimpleCalendar-v2.0\SimpleCalendar-v2.0.csproj", "{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLib", "src\SimpleStore\ProductLib\ProductLib.csproj", "{F8C43AE9-A505-4ADD-A7E6-9EDFF487EEEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleStore", "src\SimpleStore\SimpleStore\SimpleStore.csproj", "{FA5AEAFA-8885-4D6E-AD1E-3690D4788A42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage", "src\SimpleStore\Storage\Storage.csproj", "{A70A8127-D98D-471E-827F-1D8F1177D659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleStoreProject", "SimpleStoreProject", "{2D40E61D-6C01-4ACC-977C-4EA1D5F30D81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +34,26 @@ Global
 		{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D7F72B1-68B9-47A3-A02C-B55F4E8BA363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C43AE9-A505-4ADD-A7E6-9EDFF487EEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C43AE9-A505-4ADD-A7E6-9EDFF487EEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C43AE9-A505-4ADD-A7E6-9EDFF487EEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C43AE9-A505-4ADD-A7E6-9EDFF487EEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA5AEAFA-8885-4D6E-AD1E-3690D4788A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA5AEAFA-8885-4D6E-AD1E-3690D4788A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA5AEAFA-8885-4D6E-AD1E-3690D4788A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA5AEAFA-8885-4D6E-AD1E-3690D4788A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70A8127-D98D-471E-827F-1D8F1177D659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70A8127-D98D-471E-827F-1D8F1177D659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70A8127-D98D-471E-827F-1D8F1177D659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70A8127-D98D-471E-827F-1D8F1177D659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8C43AE9-A505-4ADD-A7E6-9EDFF487EEEF} = {2D40E61D-6C01-4ACC-977C-4EA1D5F30D81}
+		{FA5AEAFA-8885-4D6E-AD1E-3690D4788A42} = {2D40E61D-6C01-4ACC-977C-4EA1D5F30D81}
+		{A70A8127-D98D-471E-827F-1D8F1177D659} = {2D40E61D-6C01-4ACC-977C-4EA1D5F30D81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B54FA24-6D2B-4DE0-A027-989277299748}
