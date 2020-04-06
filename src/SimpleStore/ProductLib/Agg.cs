@@ -19,7 +19,8 @@ namespace ProductLib
         public AggCategory Category { get; set; }
         public override void GetInfo()
         {
-            base.GetInfo();//TODO: Add imp
+            base.GetInfo();
+            Console.WriteLine($"Категория яиц: {Category}.\n");
         }
         public Agg(string name, double price, AggCategory category, int piece)
             : base(name, price, piece) => Category = category;

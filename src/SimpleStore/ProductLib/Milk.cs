@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProductLib
 {
-    class Milk : PieceProduct
+    public class Milk : PieceProduct
     {
         /// <summary>
         /// Объем.
@@ -18,7 +18,8 @@ namespace ProductLib
         }
         public override void GetInfo()
         {
-            base.GetInfo();// TODO: add imp
+            base.GetInfo();
+            Console.WriteLine($"Объем: {Volume}л.\n");
         }
         public Milk() { }
     }

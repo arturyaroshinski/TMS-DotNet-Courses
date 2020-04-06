@@ -12,7 +12,8 @@ namespace ProductLib
         public PieceProduct() { }
         public override void GetInfo()
         {
-            base.GetInfo();// TODO: add imp
+            base.GetInfo();
+            Console.WriteLine($"Кол-во: {Piece}");
         }
     }
 }
