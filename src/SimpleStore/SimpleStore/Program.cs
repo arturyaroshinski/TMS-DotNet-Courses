@@ -9,14 +9,14 @@ namespace SimpleStore
         {
             Store myStore = new Store();
 
-            Agg myAgg = new Agg();
+            Agg myAgg = new Agg("Яйца", 0.2, AggCategory.B, 12);
             myStore.AddProduct(myAgg);
 
-            Agg myAgg1 = new Agg();
-            myStore.AddProduct(myAgg1);
+            Groats myGroats = new Groats("Гречка", 3,500);
+            myStore.AddProduct(myGroats);
 
-            Agg myAgg2 = new Agg();
-            myStore.AddProduct(myAgg2);
+            Milk myMilk = new Milk("Молоко", 1.5, 7,0.5);
+            myStore.AddProduct(myMilk);
 
             myStore.ViewProduct();
         }
