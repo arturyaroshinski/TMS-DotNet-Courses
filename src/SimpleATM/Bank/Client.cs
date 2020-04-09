@@ -20,10 +20,6 @@ namespace BankLib
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// Идентификатор.
-        /// </summary>
-        public int Id { get; set; }
-        /// <summary>
         /// Пополнить счет.
         /// </summary>
         /// <param name="money">Сумма.</param>
