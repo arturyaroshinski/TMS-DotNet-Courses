@@ -4,6 +4,10 @@ namespace BankLib
 {
     public class Bank
     {
+        /// <summary>
+        /// Меню банкомата.
+        /// </summary>
+        /// <param name="client">Клиент.</param>
         public static void Menu(Client client)
         {
             while (true)
