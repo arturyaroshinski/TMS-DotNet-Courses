@@ -65,6 +65,7 @@ namespace BankLib
         {
             Console.WriteLine($"Your current balance: {_currBalance}$.");
         }
+        public decimal GetBalance() => _currBalance;
         /// <summary>
         /// Конструктор без параметров.
         /// </summary>
@@ -76,8 +77,15 @@ namespace BankLib
         /// <param name="balance">Баланс.</param>
         public Client(string name, decimal balance)
         {
+            if (balance < 0)
+            {
+                _currBalance = 0;
+            }
+            else
+            {
+            _currBalance = balance;
+            }
             Name = name;
-            _currBalance += balance;
         }
     }
 }

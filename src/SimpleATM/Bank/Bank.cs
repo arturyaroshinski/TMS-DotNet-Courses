@@ -2,7 +2,7 @@
 
 namespace BankLib
 {
-    public class Bank
+    public static class Bank
     {
         /// <summary>
         /// Меню банкомата.
@@ -40,6 +40,10 @@ namespace BankLib
                 }
             }
         }
+        /// <summary>
+        /// Ввод суммы.
+        /// </summary>
+        /// <returns>Сумма.</returns>
         static private decimal EnterAmout()
         {
             Console.WriteLine("Enter amout:");
