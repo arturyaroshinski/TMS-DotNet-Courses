@@ -29,8 +29,16 @@ namespace BankLib
         /// <param name="money">Сумма.</param>
         public void Put(decimal money)
         {
+            if (money > 0)
+            {
             _currBalance += money;
             Notify?.Invoke($"You put {money}$, your current balance: {_currBalance}$");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid input");
+            }
         }
         /// <summary>
         /// Снять со счета.
@@ -38,8 +46,17 @@ namespace BankLib
         /// <param name="money">Сумма.</param>
         public void Take(decimal money)
         {
+            if (money > 0 && money < _currBalance)
+            {
             _currBalance -= money;
             Notify?.Invoke($"You take { money}$, your current balance: { _currBalance}$");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid input or you don't have enought money on your balance.");
+                Balance();
+            }
         }
         /// <summary>
         /// Проверить баланс.

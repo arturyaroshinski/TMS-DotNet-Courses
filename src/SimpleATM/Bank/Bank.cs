@@ -23,14 +23,10 @@ namespace BankLib
                 switch (menuOption)
                 {
                     case "1":
-                        Console.WriteLine("Enter amout:");
-                        decimal.TryParse(Console.ReadLine(), out decimal putMoney);
-                        client.Put(putMoney);
+                        client.Put(EnterAmout());
                         break;
                     case "2":
-                        Console.WriteLine("Enter amount");
-                        decimal.TryParse(Console.ReadLine(), out decimal takeMoney);
-                        client.Put(takeMoney);
+                        client.Take(EnterAmout());
                         break;
                     case "3":
                         client.Balance();
@@ -42,6 +38,16 @@ namespace BankLib
                         Console.WriteLine("Invalid input, try again.");
                         break;
                 }
+            }
+        }
+        static private decimal EnterAmout()
+        {
+            Console.WriteLine("Enter amout:");
+            if (decimal.TryParse(Console.ReadLine(), out decimal money))
+                return money;
+            else
+            {
+                return 0;
             }
         }
     }
