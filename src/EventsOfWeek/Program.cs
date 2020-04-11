@@ -14,7 +14,9 @@ namespace EventsOfWeek
             Saturday = 6,
             Sunday = 7,
         }
+
         static string[] events = new string[7];
+
         static void Main(string[] args)
         {
             while (true)
@@ -29,6 +31,7 @@ namespace EventsOfWeek
                 Console.Clear();
             }
         }
+
         static void SelectDay()
         {
             string userInput = Console.ReadLine();
@@ -103,6 +106,7 @@ namespace EventsOfWeek
                     }
             }
         }
+
         static void AddEvent(Week day)
         {
             if (string.IsNullOrWhiteSpace(events[((int)day - 1)]))

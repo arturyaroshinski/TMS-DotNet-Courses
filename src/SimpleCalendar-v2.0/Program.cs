@@ -28,6 +28,7 @@ namespace SimpleCalendar_v2._0
                 Console.WriteLine("[1] Add event.\n[2] View all events.\n[3] Clear console.\n[4] Quit app.");
                 Console.ResetColor();
                 Console.WriteLine("Choose option by writing its number.");
+
                 string menuOption = Console.ReadLine();
                 switch (menuOption)
                 {
@@ -77,7 +78,7 @@ namespace SimpleCalendar_v2._0
         /// </summary>
         static void AddEvent()
         {
-            UserEvent userEvent = new UserEvent();
+            var userEvent = new UserEvent();
             userEvent.DateOfEvent = GetDate();
 
             Console.Write("Enter ur event at this day: ");
