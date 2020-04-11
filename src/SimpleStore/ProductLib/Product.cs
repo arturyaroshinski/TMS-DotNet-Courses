@@ -11,10 +11,12 @@ namespace ProductLib
         /// Имя.
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
         /// Уникальный номер.
         /// </summary>
         public Guid Code { get; }
+
         /// <summary>
         /// Цена.
         /// </summary>
@@ -27,10 +29,12 @@ namespace ProductLib
         {
             Console.WriteLine($"Название продукта: {Name}.\nЦена: {Price}$.\nУникальный код: {Code}.");
         }
+
         /// <summary>
         /// Конструктор без параметров.
         /// </summary>
         protected Product() => Code = Guid.NewGuid();
+
         /// <summary>
         /// Конструктор с параметрами.
         /// </summary>

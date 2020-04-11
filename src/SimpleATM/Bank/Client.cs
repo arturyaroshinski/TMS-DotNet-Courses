@@ -11,14 +11,17 @@ namespace BankLib
         /// Уведомление.
         /// </summary>
         public event Action<string> Notify;
+
         /// <summary>
         /// Текущий баланс.
         /// </summary>
         private decimal _currBalance;
+
         /// <summary>
         /// Имя.
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
         /// Пополнить счет.
         /// </summary>
@@ -27,8 +30,8 @@ namespace BankLib
         {
             if (money > 0)
             {
-            _currBalance += money;
-            Notify?.Invoke($"You put {money}$, your current balance: {_currBalance}$");
+                _currBalance += money;
+                Notify?.Invoke($"You put {money}$, your current balance: {_currBalance}$");
             }
             else
             {
@@ -36,16 +39,17 @@ namespace BankLib
                 Console.WriteLine("Invalid input");
             }
         }
+
         /// <summary>
         /// Снять со счета.
         /// </summary>
         /// <param name="money">Сумма.</param>
         public void Take(decimal money)
         {
-            if (money > 0 && money < _currBalance)
+            if (money > 0 && money <= _currBalance)
             {
-            _currBalance -= money;
-            Notify?.Invoke($"You take { money}$, your current balance: { _currBalance}$");
+                _currBalance -= money;
+                Notify?.Invoke($"You take {money}$, your current balance: { _currBalance}$");
             }
             else
             {
@@ -54,6 +58,7 @@ namespace BankLib
                 Balance();
             }
         }
+
         /// <summary>
         /// Проверить баланс.
         /// </summary>
@@ -61,11 +66,18 @@ namespace BankLib
         {
             Console.WriteLine($"Your current balance: {_currBalance}$.");
         }
+
+        /// <summary>
+        /// Возврат баланса.
+        /// </summary>
+        /// <returns>Баланс.</returns>
         public decimal GetBalance() => _currBalance;
+
         /// <summary>
         /// Конструктор без параметров.
         /// </summary>
         public Client() { }
+
         /// <summary>
         /// Конструктор с параметрами.
         /// </summary>
@@ -79,7 +91,7 @@ namespace BankLib
             }
             else
             {
-            _currBalance = balance;
+                _currBalance = balance;
             }
             Name = name;
         }

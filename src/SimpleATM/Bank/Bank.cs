@@ -2,6 +2,9 @@
 
 namespace BankLib
 {
+    /// <summary>
+    /// Банкомат.
+    /// </summary>
     public static class Bank
     {
         /// <summary>
@@ -19,7 +22,6 @@ namespace BankLib
                 Console.WriteLine("Choose option by writing its number.");
 
                 string menuOption = Console.ReadLine();
-
                 switch (menuOption)
                 {
                     case "1":
@@ -40,6 +42,7 @@ namespace BankLib
                 }
             }
         }
+
         /// <summary>
         /// Ввод суммы.
         /// </summary>
