@@ -11,11 +11,13 @@ namespace ATMxUnitTest
             // Arrange
             decimal negValue = -1;
             var client = new Client("Name", negValue);
+
             // Act
-            decimal actualBalance = client.GetBalance();
+            decimal actual = client.GetBalance();
+
             // Assert
-            decimal expectedBalance = 0;
-            Assert.Equal(expectedBalance, actualBalance);
+            decimal expected = 0;
+            Assert.Equal(expected, actual);
         }
     }
 }
