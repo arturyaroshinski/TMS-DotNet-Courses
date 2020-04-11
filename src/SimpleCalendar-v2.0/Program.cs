@@ -5,22 +5,30 @@ namespace SimpleCalendar_v2._0
 {
     class Program
     {
-        static List<UserEvent> eventsList = new List<UserEvent>();
+        /// <summary>
+        /// Список событий.
+        /// </summary>
+        static List<UserEvent> events = new List<UserEvent>();
+
         static void Main(string[] args)
         {
             Menu();
         }
+
+        /// <summary>
+        /// Вызов меню.
+        /// </summary>
         static void Menu()
         {
             while (true)
             {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Menu:");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("[1] Add event.\n[2] View all events.\n[3] Clear console.\n[4] Quit app.");
-            Console.ResetColor();
-            Console.WriteLine("Choose option by writing its number.");
-            string menuOption = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Menu:");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("[1] Add event.\n[2] View all events.\n[3] Clear console.\n[4] Quit app.");
+                Console.ResetColor();
+                Console.WriteLine("Choose option by writing its number.");
+                string menuOption = Console.ReadLine();
                 switch (menuOption)
                 {
                     case "1":
@@ -34,7 +42,8 @@ namespace SimpleCalendar_v2._0
                         break;
                     case "4":
                         Console.WriteLine("See u next time.");
-                        return;
+                        Environment.Exit(0);
+                        break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid input, try again.");
@@ -43,6 +52,7 @@ namespace SimpleCalendar_v2._0
                 }
             }
         }
+
         static DateTime GetDate()
         {
             Console.WriteLine("Input date.");
@@ -61,22 +71,32 @@ namespace SimpleCalendar_v2._0
                 }
             }
         }
+
+        /// <summary>
+        /// Добавление события.
+        /// </summary>
         static void AddEvent()
         {
             UserEvent userEvent = new UserEvent();
             userEvent.DateOfEvent = GetDate();
+
             Console.Write("Enter ur event at this day: ");
             userEvent.Name = Console.ReadLine();
-            eventsList.Add(userEvent);
+
+            events.Add(userEvent);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Event successfully added\n");
         }
+
+        /// <summary>
+        /// Просмотр всех событий.
+        /// </summary>
         static void ViewEvents()
         {   
-            if (eventsList.Count >= 1)
+            if (events.Count >= 1)
             {
                 Console.WriteLine("Ur events: ");
-                foreach (var item in eventsList)
+                foreach (var item in events)
                 { 
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("{0:D}: {1}.", item.DateOfEvent, item.Name);
