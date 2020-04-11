@@ -2,6 +2,9 @@
 
 namespace ProductLib
 {
+    /// <summary>
+    /// Абстрактный класс продукт.
+    /// </summary>
     public abstract class Product
     {
         /// <summary>
@@ -17,6 +20,9 @@ namespace ProductLib
         /// </summary>
         public double Price { get; set; }
 
+        /// <summary>
+        /// Вывод информации о продукте.
+        /// </summary>
         public virtual void GetInfo()
         {
             Console.WriteLine($"Название продукта: {Name}.\nЦена: {Price}$.\nУникальный код: {Code}.");
@@ -32,7 +38,11 @@ namespace ProductLib
         /// <param name="price">Цена.</param>
         protected Product(string name, double price)
         {
-            // TODO: добавить проверку.
+            if (price < 0)
+            {
+                price = 0;
+            }
+
             Name = name;
             Code = Guid.NewGuid();
             Price = price;
