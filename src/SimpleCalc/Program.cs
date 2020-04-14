@@ -24,7 +24,7 @@ namespace SimpleCalc
                 }
 
                 //user choose math operation
-                Console.WriteLine("Choose math operation('+', '-', '*','/'): ");
+                Console.WriteLine("Choose math operation('+', '-', '*','/') or enter 'q' for exit: ");
                 double result = 0; bool validOperation = false;
                 while (!validOperation)
                 {
@@ -32,39 +32,46 @@ namespace SimpleCalc
                     switch (mathOperation)
                     {
                         case "+":
-                            result = firstArgument + secondArgument;
-                            validOperation = true;
-                            break;
-                        case "-":
-                            result = firstArgument - secondArgument;
-                            validOperation = true;
-                            break;
-                        case "*":
-                            result = firstArgument * secondArgument;
-                            validOperation = true;
-                            break;
-                        case "/":
-                            if (secondArgument == 0)
                             {
-                                // division by 0 exeption
-                                Console.WriteLine("Division by 0 is not available, choose other operation: ");
+                                result = firstArgument + secondArgument;
+                                validOperation = true;
                                 break;
                             }
-                            result = firstArgument / secondArgument;
-                            validOperation = true;
+                        case "-":
+                            {
+                                result = firstArgument - secondArgument;
+                                validOperation = true;
+                                break;
+                            }
+                        case "*":
+                            {
+                                result = firstArgument * secondArgument;
+                                validOperation = true;
+                                break;
+                            }
+                        case "/":
+                            {
+                                if (secondArgument == 0)
+                                {
+                                    // division by 0 exeption
+                                    Console.WriteLine("Division by 0 is not available, choose other operation: ");
+                                    break;
+                                }
+                                result = firstArgument / secondArgument;
+                                validOperation = true;
+                                break;
+                            }
+                        case "q":
+                            Environment.Exit(0);
                             break;
                         default:
                             Console.WriteLine("Invalid input, try again");
                             break;
                     }
                 }
+
                 Console.WriteLine("Result is: " + result);
-                // try again or quit
-                Console.WriteLine("Input 'q' for exit, any other input will start app again");
-                if (Console.ReadLine().Equals("q"))
-                {
-                    return;
-                }
+
                 Console.Clear();
             }
         }

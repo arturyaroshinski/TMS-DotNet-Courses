@@ -7,15 +7,15 @@ namespace SimpleStore
     {
         static void Main(string[] args)
         {
-            Store myStore = new Store();
+            var myStore = new Store();
 
-            Agg myAgg = new Agg("Яйца", 0.2, AggCategory.B, 12);
+            var myAgg = new Agg("Яйца", 0.2, AggCategory.B, 12);
             myStore.AddProduct(myAgg);
 
-            Groats myGroats = new Groats("Гречка", 3,500);
+            var myGroats = new Groats("Гречка", 3,500);
             myStore.AddProduct(myGroats);
 
-            Milk myMilk = new Milk("Молоко", 1.5, 7,0.5);
+            var myMilk = new Milk("Молоко", 1.5, 7,0.5);
             myStore.AddProduct(myMilk);
 
             myStore.ViewProduct();
